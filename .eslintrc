@@ -12,6 +12,8 @@
   },
   "rules": {
     "prettier/prettier": "error",
+    "prefer-const": "off",
+    "prefer-destructuring": "off",
     "lines-between-class-members": "off"
   }
 }
