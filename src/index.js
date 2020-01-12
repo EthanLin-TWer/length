@@ -19,6 +19,7 @@ export class Length {
     let result = this
     const FOOT = 'f'
     const YARD = 'yard'
+    const INCH = 'inch'
     if (this.unit === YARD) {
       if (unit === FOOT) {
         result = new Length(this.value * 3, unit)
@@ -38,7 +39,7 @@ export class Length {
     if (this.unit === FOOT) {
       if (unit === YARD) {
         result = new Length(this.value / 3, unit)
-      } else if (unit === 'inch') {
+      } else if (unit === INCH) {
         result = new Length(this.value * 12, unit)
       }
     }
