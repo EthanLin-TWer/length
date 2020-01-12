@@ -23,12 +23,12 @@ export class Length {
     if (this.unit === YARD) {
       if (unit === FOOT) {
         result = new Length(this.value * 3, unit)
-      } else if (unit === 'inch') {
+      } else if (unit === INCH) {
         result = new Length(this.value * 36, unit)
       }
     }
 
-    if (this.unit === 'inch') {
+    if (this.unit === INCH) {
       if (unit === YARD) {
         result = new Length(this.value / 36, unit)
       } else if (unit === FOOT) {
