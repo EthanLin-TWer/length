@@ -1,1 +1,3 @@
-export class Unit {}
+export class Unit {
+  static YARD = 'yard'
+}

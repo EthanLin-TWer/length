@@ -1,8 +1,10 @@
+import { Unit } from './unit'
+
 export class Length {
   value
   unit
 
-  static YARD = 'yard'
+  static YARD = Unit.YARD
   static INCH = 'inch'
   static FOOT = 'foot'
 
