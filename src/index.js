@@ -27,7 +27,7 @@ export class Length {
     let value = this.value
     if (this.unit === Unit.YARD) {
       if (unit === Unit.FOOT) {
-        value = this.value * 3
+        return this.value * 3
       } else if (unit === Unit.INCH) {
         value = this.value * 36
       }
