@@ -50,6 +50,6 @@ export class Length {
       }
     }
 
-    return result
+    return new Length(value, unit)
   }
 }
