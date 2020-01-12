@@ -4,7 +4,7 @@ export class Length {
   value
   unit
 
-  static FOOT = 'foot'
+  static FOOT = Unit.FOOT
 
   constructor(value, unit) {
     this.value = value
