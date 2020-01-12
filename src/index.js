@@ -29,12 +29,12 @@ export class Length {
     if (this.unit === 'inch') {
       if (unit === 'yard') {
         result = new Length(this.value / 36, unit)
-      } else if (unit === 'f') {
+      } else if (unit === FOOT) {
         result = new Length(this.value / 12, unit)
       }
     }
 
-    if (this.unit === 'f') {
+    if (this.unit === FOOT) {
       if (unit === 'yard') {
         result = new Length(this.value / 3, unit)
       } else if (unit === 'inch') {
