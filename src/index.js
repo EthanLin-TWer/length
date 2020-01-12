@@ -18,7 +18,7 @@ export class Length {
   }
 
   parseTo(unit) {
-    let result = this
+    let result = new Length(this.value, unit)
     if (this.unit === Unit.YARD) {
       if (unit === Unit.FOOT) {
         result = new Length(this.value * 3, unit)
