@@ -15,32 +15,32 @@ export class Length {
     return this.unit
   }
 
-  parseTo(u) {
-    let len = this
+  parseTo(unit) {
+    let result = this
     if (this.unit === 'yard') {
-      if (u === 'f') {
-        len = new Length(this.value * 3, u)
-      } else if (u === 'inch') {
-        len = new Length(this.value * 36, u)
+      if (unit === 'f') {
+        result = new Length(this.value * 3, unit)
+      } else if (unit === 'inch') {
+        result = new Length(this.value * 36, unit)
       }
     }
 
     if (this.unit === 'inch') {
-      if (u === 'yard') {
-        len = new Length(this.value / 36, u)
-      } else if (u === 'f') {
-        len = new Length(this.value / 12, u)
+      if (unit === 'yard') {
+        result = new Length(this.value / 36, unit)
+      } else if (unit === 'f') {
+        result = new Length(this.value / 12, unit)
       }
     }
 
     if (this.unit === 'f') {
-      if (u === 'yard') {
-        len = new Length(this.value / 3, u)
-      } else if (u === 'inch') {
-        len = new Length(this.value * 12, u)
+      if (unit === 'yard') {
+        result = new Length(this.value / 3, unit)
+      } else if (unit === 'inch') {
+        result = new Length(this.value * 12, unit)
       }
     }
 
-    return len
+    return result
   }
 }
