@@ -4,7 +4,7 @@ export class Length {
 
   static YARD = 'yard'
   static INCH = 'inch'
-  static FOOT = 'f'
+  static FOOT = 'foot'
 
   constructor(value, unit) {
     this.value = value
