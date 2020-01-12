@@ -16,7 +16,7 @@ describe('Length', () => {
   })
 
   it("should 3 feet equals 1 'yard'", () => {
-    const result = new Length(3, Length.FOOT).parseTo('yard')
+    const result = new Length(3, Length.FOOT).parseTo(Length.YARD)
 
     expect(result.getValue()).toEqual(1)
     expect(result.getUnit()).toEqual('yard')
