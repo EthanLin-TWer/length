@@ -2,6 +2,8 @@ export class Length {
   value
   unit
 
+  static YARD = 'yard'
+
   constructor(value, unit) {
     this.value = value
     this.unit = unit
