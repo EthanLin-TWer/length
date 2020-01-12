@@ -4,7 +4,7 @@ export class Length {
   value
   unit
 
-  static INCH = 'inch'
+  static INCH = Unit.INCH
   static FOOT = 'foot'
 
   constructor(value, unit) {
