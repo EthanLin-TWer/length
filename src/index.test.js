@@ -51,10 +51,10 @@ describe('Length', () => {
   })
 
   it("should 36 inches equals 1 'yard'", () => {
-    const result = new Length(36, Length.INCH).parseTo('yard')
+    const result = new Length(36, Length.INCH).parseTo(Length.YARD)
 
     expect(result.getValue()).toEqual(1)
-    expect(result.getUnit()).toEqual('yard')
+    expect(result.getUnit()).toEqual(Length.YARD)
   })
 
   it("should 1 inch equals 1 'inch'", () => {
