@@ -18,13 +18,11 @@ export class Length {
   }
 
   parseTo(unit) {
-    let value = this.determineValue(unit)
-
+    const value = this.determineValue(unit)
     return new Length(value, unit)
   }
 
   determineValue(unit) {
-    let value = this.value
     if (this.unit === Unit.YARD) {
       if (unit === Unit.FOOT) {
         return this.value * 3
@@ -53,6 +51,6 @@ export class Length {
       }
     }
 
-    return value
+    return this.value
   }
 }
