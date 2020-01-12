@@ -35,17 +35,17 @@ export class Length {
 
     if (this.unit === Unit.INCH) {
       if (unit === Unit.YARD) {
-        value = this.value / 36
+        return this.value / 36
       } else if (unit === Unit.FOOT) {
-        value = this.value / 12
+        return this.value / 12
       }
     }
 
     if (this.unit === Unit.FOOT) {
       if (unit === Unit.YARD) {
-        value = this.value / 3
+        return this.value / 3
       } else if (unit === Unit.INCH) {
-        value = this.value * 12
+        return this.value * 12
       }
     }
 
