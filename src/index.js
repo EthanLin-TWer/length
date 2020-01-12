@@ -35,7 +35,8 @@ export class Length {
         value = this.value / 36
         result = new Length(value, unit)
       } else if (unit === Unit.FOOT) {
-        result = new Length(this.value / 12, unit)
+        value = this.value / 12
+        result = new Length(value, unit)
       }
     }
 
