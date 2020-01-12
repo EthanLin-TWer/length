@@ -25,7 +25,8 @@ export class Length {
         value = this.value * 3
         result = new Length(value, unit)
       } else if (unit === Unit.INCH) {
-        result = new Length(this.value * 36, unit)
+        value = this.value * 36
+        result = new Length(value, unit)
       }
     }
 
