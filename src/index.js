@@ -20,6 +20,19 @@ export class Length {
   parseTo(unit) {
     let value = this.determineValue(unit)
 
+    return new Length(value, unit)
+  }
+
+  determineValue(unit) {
+    let value = this.value
+    if (this.unit === Unit.YARD) {
+      if (unit === Unit.FOOT) {
+        value = this.value * 3
+      } else if (unit === Unit.INCH) {
+        value = this.value * 36
+      }
+    }
+
     if (this.unit === Unit.INCH) {
       if (unit === Unit.YARD) {
         value = this.value / 36
@@ -33,19 +46,6 @@ export class Length {
         value = this.value / 3
       } else if (unit === Unit.INCH) {
         value = this.value * 12
-      }
-    }
-
-    return new Length(value, unit)
-  }
-
-  determineValue(unit) {
-    let value = this.value
-    if (this.unit === Unit.YARD) {
-      if (unit === Unit.FOOT) {
-        value = this.value * 3
-      } else if (unit === Unit.INCH) {
-        value = this.value * 36
       }
     }
 
