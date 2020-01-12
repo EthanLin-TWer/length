@@ -20,9 +20,8 @@ export class Length {
   parseTo(unit) {
     let result = this
     const FOOT = 'f'
-    const YARD = Length.YARD
     const INCH = 'inch'
-    if (this.unit === YARD) {
+    if (this.unit === Length.YARD) {
       if (unit === FOOT) {
         result = new Length(this.value * 3, unit)
       } else if (unit === INCH) {
@@ -31,7 +30,7 @@ export class Length {
     }
 
     if (this.unit === INCH) {
-      if (unit === YARD) {
+      if (unit === Length.YARD) {
         result = new Length(this.value / 36, unit)
       } else if (unit === FOOT) {
         result = new Length(this.value / 12, unit)
@@ -39,7 +38,7 @@ export class Length {
     }
 
     if (this.unit === FOOT) {
-      if (unit === YARD) {
+      if (unit === Length.YARD) {
         result = new Length(this.value / 3, unit)
       } else if (unit === INCH) {
         result = new Length(this.value * 12, unit)
