@@ -4,7 +4,6 @@ export class Length {
   value
   unit
 
-  static INCH = Unit.INCH
   static FOOT = 'foot'
 
   constructor(value, unit) {
@@ -25,12 +24,12 @@ export class Length {
     if (this.unit === Unit.YARD) {
       if (unit === Length.FOOT) {
         result = new Length(this.value * 3, unit)
-      } else if (unit === Length.INCH) {
+      } else if (unit === Unit.INCH) {
         result = new Length(this.value * 36, unit)
       }
     }
 
-    if (this.unit === Length.INCH) {
+    if (this.unit === Unit.INCH) {
       if (unit === Unit.YARD) {
         result = new Length(this.value / 36, unit)
       } else if (unit === Length.FOOT) {
@@ -41,7 +40,7 @@ export class Length {
     if (this.unit === Length.FOOT) {
       if (unit === Unit.YARD) {
         result = new Length(this.value / 3, unit)
-      } else if (unit === Length.INCH) {
+      } else if (unit === Unit.INCH) {
         result = new Length(this.value * 12, unit)
       }
     }
