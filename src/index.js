@@ -29,7 +29,7 @@ export class Length {
       if (unit === Unit.FOOT) {
         return this.value * 3
       } else if (unit === Unit.INCH) {
-        value = this.value * 36
+        return this.value * 36
       }
     }
 
