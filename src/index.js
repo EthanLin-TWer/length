@@ -7,11 +7,11 @@ export class Length {
     this.unit = unit
   }
 
-  getVal() {
+  getValue() {
     return this.value
   }
 
-  getUint() {
+  getUnit() {
     return this.unit
   }
 
