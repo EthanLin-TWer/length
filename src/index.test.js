@@ -9,7 +9,7 @@ describe('Length', () => {
   })
 
   it("should 1 'foot' equals 12 inches", () => {
-    const result = new Length(1, Length.FOOT).parseTo('inch')
+    const result = new Length(1, Length.FOOT).parseTo(Length.INCH)
 
     expect(result.getValue()).toEqual(12)
     expect(result.getUnit()).toEqual('inch')
