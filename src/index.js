@@ -28,7 +28,9 @@ export class Length {
     if (this.unit === Unit.YARD) {
       if (unit === Unit.FOOT) {
         return this.value * 3
-      } else if (unit === Unit.INCH) {
+      }
+
+      if (unit === Unit.INCH) {
         return this.value * 36
       }
     }
@@ -36,7 +38,8 @@ export class Length {
     if (this.unit === Unit.INCH) {
       if (unit === Unit.YARD) {
         return this.value / 36
-      } else if (unit === Unit.FOOT) {
+      }
+      if (unit === Unit.FOOT) {
         return this.value / 12
       }
     }
@@ -44,7 +47,8 @@ export class Length {
     if (this.unit === Unit.FOOT) {
       if (unit === Unit.YARD) {
         return this.value / 3
-      } else if (unit === Unit.INCH) {
+      }
+      if (unit === Unit.INCH) {
         return this.value * 12
       }
     }
