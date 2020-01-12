@@ -4,7 +4,6 @@ export class Length {
   value
   unit
 
-  static YARD = Unit.YARD
   static INCH = 'inch'
   static FOOT = 'foot'
 
@@ -23,7 +22,7 @@ export class Length {
 
   parseTo(unit) {
     let result = this
-    if (this.unit === Length.YARD) {
+    if (this.unit === Unit.YARD) {
       if (unit === Length.FOOT) {
         result = new Length(this.value * 3, unit)
       } else if (unit === Length.INCH) {
@@ -32,7 +31,7 @@ export class Length {
     }
 
     if (this.unit === Length.INCH) {
-      if (unit === Length.YARD) {
+      if (unit === Unit.YARD) {
         result = new Length(this.value / 36, unit)
       } else if (unit === Length.FOOT) {
         result = new Length(this.value / 12, unit)
@@ -40,7 +39,7 @@ export class Length {
     }
 
     if (this.unit === Length.FOOT) {
-      if (unit === Length.YARD) {
+      if (unit === Unit.YARD) {
         result = new Length(this.value / 3, unit)
       } else if (unit === Length.INCH) {
         result = new Length(this.value * 12, unit)
