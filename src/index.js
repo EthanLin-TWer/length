@@ -2,9 +2,9 @@ export class Length {
   value
   unit
 
-  constructor(val, uint) {
-    this.value = val
-    this.unit = uint
+  constructor(value, unit) {
+    this.value = value
+    this.unit = unit
   }
 
   getVal() {
