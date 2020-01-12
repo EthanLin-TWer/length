@@ -32,7 +32,8 @@ export class Length {
 
     if (this.unit === Unit.INCH) {
       if (unit === Unit.YARD) {
-        result = new Length(this.value / 36, unit)
+        value = this.value / 36
+        result = new Length(value, unit)
       } else if (unit === Unit.FOOT) {
         result = new Length(this.value / 12, unit)
       }
